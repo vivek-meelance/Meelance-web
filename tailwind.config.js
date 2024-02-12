@@ -1,18 +1,31 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+ 
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      screens: {
+        '2sm' : '450px',
+        '3xl': '1920px', // Adding a custom breakpoint for 1920px width screens
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem', // Default padding
+          sm: '2rem',      // Padding for small screens
+          lg: '3rem',      // Padding for large screens
+          xl: '4rem',      // Padding for extra-large screens
+          '2xl': '6rem',
+          // '3xl': '10rem'      
+        },
       },
     },
   },
   plugins: [],
-};
+}

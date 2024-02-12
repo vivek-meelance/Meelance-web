@@ -2,32 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.heading{
+  background-image: 
+  linear-gradient(180deg, rgba(0, 0, 0, 0.66) 0%, #000000 84%),
+  linear-gradient(180deg, rgba(0, 0, 0, 0.297) 0%, rgba(0, 0, 0, 0.45) 84%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
+.byGragient{
+  background: linear-gradient(
+    299.53deg,
+    #000000 29.05%,
+    #372054 84.15%,
+    #5420a4 100.44%);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+}
+.boxGred{
+  background: conic-gradient(from 195.7deg at 50% 50%, #d3caf1 0deg, rgba(66, 232, 255, 0) 95.01deg, rgba(244, 208, 221, 0.5) 185.59deg, #cddffb 274.88deg, #d8cff6 360deg);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+}
+@media (max-width:450px) {
+  .byGragient{
+    font-size: 30px;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media (max-width:309px) {
+  .byGragient{
+    font-size: 25px;
   }
 }
