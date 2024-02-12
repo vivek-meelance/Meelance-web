@@ -55,7 +55,7 @@ export default function Home() {
           </div>
           <div className="flex-1">
               <video autoPlay muted loop>
-                <source src="/videos/Comments_video.mp4" type="video/mp4" />
+                <source src="/videos/CommentsVideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>

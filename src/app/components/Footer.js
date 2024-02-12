@@ -25,7 +25,7 @@ const Footer = () => {
             height="44"
             />
             <Image
-            src="/X.svg"
+            src="/ximg.svg"
             alt="Gallery_Animation"
             width="44"
             height="44"
