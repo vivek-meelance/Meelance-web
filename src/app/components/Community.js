@@ -15,7 +15,7 @@ const Community = () => {
         </div>
       </div>
       <div className="text-[35px] 2sm:text-[40px] lg:text-[50px] font-semibold leading-[50px] 2sm:leading-[61px] tracking-[-0.04em] text-left mt-[25px]"><span className="byGragient">access to millions +</span> Creative Professionals and Leaders</div>
-      <p className="text-lg font-medium leading-[27px] tracking-normal text-left mt-0 2sm:mt-[25px]">With Meelance, you can reach executives all around the world directly. It's like a marketplace that helps individuals (artists, content creators or any entertainment professionals) connect with decision makers easily, and we believe in being transparent.</p>
+      <p className="text-lg font-medium leading-[27px] tracking-normal text-left mt-0 2sm:mt-[25px]">With Meelance, you can reach executives all around the world directly. It&apos;s like a marketplace that helps individuals (artists, content creators or any entertainment professionals) connect with decision makers easily, and we believe in being transparent.</p>
       <div className="truncate rounded-2xl mt-[30px] 2sm:mt-[50px]">
         <video autoPlay muted loop width="100%" height="364px">
             <source src="/videos/spotLight.mp4" type="video/mp4" />
