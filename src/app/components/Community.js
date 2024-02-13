@@ -9,7 +9,7 @@ const Community = () => {
         <div className="basis-[30%]">Image Needed</div>
         <div className="basis-[70%]">
           <h2 className="text-[35px] 2sm:text-[45px] lg:text-[96px] font-normal leading-[55px] 2sm:leading-[70px] lg:leading-[110px] tracking-normal text-left">
-            Built <sub className="byGragient text-[59px]">By</sub> <br/> Community <sub className="byGragient text-[59px]">fostering</sub> <br/> Connections
+            Built <sub className="byGragient text-[59px]">by</sub> <br/> Community, <sub className="byGragient text-[59px]">fostering</sub> <br/> Connections
           </h2>
           <h3 className="text-[30px] 2sm:text-[35px] lg:text-5xl font-semibold leading-[40px] lg:leading-[58px] tracking-[-0.04em] text-left">Your aspirations are within your reach</h3>
           <p className="text-lg font-medium leading-[27px] tracking-normal text-left">Establishing connections is important. The entertainment industry works on it. Achieving access requires friends and supporters. Meelance gives you a friendly, positive, and teamwork-focused community of creative and professional individuals to help you connect with your community.</p>

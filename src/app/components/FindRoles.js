@@ -16,22 +16,22 @@ const FindRoles = () => {
       <h3 className="text-lg font-bold leading-[27px] tracking-normal">
         Explore popular jobs for:
       </h3>
-      <div className="flex flex-wrap gap-[20px] justify-start lg:justify-between items-start mt-[30px]">
-        <div className="boxGred text-lg font-medium leading-[27px] tracking-normal rounded-lg p-[16px]">
-          Actors + <br /> Other Performing Arts
+      <div className="flex flex-col 2sm:flex-row flex-wrap gap-[20px] justify-start lg:justify-between items-start mt-[30px]">
+        <div className="boxGred w-full 2sm:w-auto text-lg font-medium leading-[27px] tracking-normal rounded-lg p-[16px]">
+          Actors + <br className="hidden 2sm:block"/> Other Performing Arts
         </div>
-        <div className="boxGred text-lg font-medium leading-[27px] tracking-normal rounded-lg p-[16px]">
+        <div className="boxGred w-full 2sm:w-auto text-lg font-medium leading-[27px] tracking-normal rounded-lg p-[16px]">
           Creative Freelancers
-          <br /> + Crew
+          <br className="hidden 2sm:block"/> + Crew
         </div>
-        <div className="boxGred text-lg font-medium leading-[27px] tracking-normal rounded-lg p-[16px]">
-          Influencers + <br /> Content Creators
+        <div className="boxGred w-full 2sm:w-auto text-lg font-medium leading-[27px] tracking-normal rounded-lg p-[16px]">
+          Influencers + <br className="hidden 2sm:block" /> Content Creators
         </div>
-        <div className="boxGred text-lg font-medium leading-[27px] tracking-normal rounded-lg p-[16px]">
+        <div className="boxGred w-full 2sm:w-auto text-lg font-medium leading-[27px] tracking-normal rounded-lg p-[16px]">
           Models
         </div>
-        <div className="boxGred text-lg font-medium leading-[27px] tracking-normal rounded-lg p-[16px]">
-          Voiceover Artists + <br /> Singers
+        <div className="boxGred w-full 2sm:w-auto text-lg font-medium leading-[27px] tracking-normal rounded-lg p-[16px]">
+          Voiceover Artists + <br className="hidden 2sm:block" /> Singers
         </div>
       </div>
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-[20px] mt-[40px]">
