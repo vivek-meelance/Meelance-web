@@ -3,7 +3,9 @@ import Community from "./components/Community";
 import FindRoles from "./components/FindRoles";
 import Footer from "./components/Footer";
 
+
 export default function Home() {
+  
   return (
     <>
       <div className="bg-[#FDF5FF] min-h-screen h-auto">
@@ -14,17 +16,30 @@ export default function Home() {
                 Exclusive resource for ”entertainment talent professionals”
               </span>
             </h1>
-            <Image
+            {/* <Image
               src="/Gallery_Animation.svg"
               alt="Gallery_Animation"
               width="832"
               height="258"
               className="mt-[20px] md:mt-[50px]"
-            />
+            /> */}
+            <div className="rounded-2xl truncate">
+              <video autoPlay muted loop className="w-full">
+                <source src="/videos/frontVideo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
           <div>
             {/* <Image src='/phoneScreen.svg' alt="phoneScreen" width={372} height={508}/> */}
-            <video autoPlay muted loop width="372" height="508" className="mx-auto md:ml-auto 2xl:mx-auto">
+            <video
+              autoPlay
+              muted
+              loop
+              // width="372"
+              // height="508"
+              className="mx-auto md:ml-auto 2xl:mx-auto w-[400px]"
+            >
               <source src="/videos/mobileVideo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -43,7 +58,9 @@ export default function Home() {
                 +12,568 signed up for early access
               </p>
             </div>
-            <button className="flex items-center shadow-[0px_3px_40px_0px_#00000040] gap-2.5 pl-6 pr-[24px] py-[10px] rounded-2xl bg-[#fff] mt-[30px] font-bold">
+            <button
+              className="flex items-center shadow-[0px_3px_40px_0px_#00000040] gap-2.5 pl-6 pr-[24px] py-[10px] rounded-2xl bg-[#fff] mt-[30px] font-bold"
+            >
               <span>learn more herev</span>
               <Image
                 src="/guidance_up-arrow.svg"
@@ -53,16 +70,16 @@ export default function Home() {
               />
             </button>
           </div>
-          <div className="flex-1">
-              <video autoPlay muted loop>
-                <source src="/videos/CommentsVideo.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
+          <div className="flex-1 truncate rounded-2xl">
+            <video autoPlay muted loop>
+              <source src="/videos/CommentsVideo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
-        <Community/>
-        <FindRoles/>
-        <Footer/>
+        <Community />
+        <FindRoles />
+        <Footer />
       </div>
     </>
   );

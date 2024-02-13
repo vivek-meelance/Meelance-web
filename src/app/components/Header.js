@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Header = () => {
+
   return (
     <div className="bg-[#FDF5FF] sticky top-0 z-10">
       <div className="container">

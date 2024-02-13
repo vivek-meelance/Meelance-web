@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
+
 const Community = () => {
   return (
     <div className="container mt-[30px] 2sm:mt-[80px]">
