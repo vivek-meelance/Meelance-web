@@ -72,7 +72,7 @@ export default function Home() {
           </div>
           <div className="flex-1 truncate rounded-2xl">
             <video autoPlay muted loop>
-              <source src="/videos/CommentsVideo.mp4" type="video/mp4" />
+              <source src="/videos/commentsVideo.mp4" type="video/mp4" className="w-full"/>
               Your browser does not support the video tag.
             </video>
           </div>
