@@ -45,8 +45,8 @@ const FindRoles = () => {
           />
         </div>
         <div className="basis-[70%]">
-          <h4 className="text-[35px] 2sm:text-[40px] font-semibold leading-[48px] tracking-[-0.04em]">Always get the latest Job updates</h4>
-          <p className="text-lg font-normal leading-[30px] tracking-normal">
+          <h4 className="text-[35px] 2sm:text-[40px] font-semibold leading-[48px] tracking-[-0.04em] text-right">Always get the latest Job updates</h4>
+          <p className="text-lg font-normal leading-[30px] tracking-normal text-right">
             Et in sapien enim congue interdum pulvinar non sed. Ac augue netus
             tellus semper.
           </p>
