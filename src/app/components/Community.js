@@ -1,10 +1,11 @@
-import React from "react";
+import React,{ forwardRef } from "react";
 import Image from "next/image";
 
 
-const Community = () => {
+
+const Community = forwardRef((props,ref) => {
   return (
-    <div className="container mt-[30px] 2sm:mt-[80px]">
+    <div className="container mt-[30px] 2sm:mt-[80px]" ref={ref}>
       <div className="flex flex-col-reverse md:flex-row">
         <div className="basis-[30%]">Image Needed</div>
         <div className="basis-[70%]">
@@ -36,6 +37,6 @@ const Community = () => {
         </button>
     </div>
   );
-};
+});
 
 export default Community;

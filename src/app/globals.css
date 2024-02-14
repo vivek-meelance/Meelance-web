@@ -27,7 +27,6 @@
 }
 .boxGred{
   background: conic-gradient(from 195.7deg at 50% 50%, #d3caf1 0deg, rgba(66, 232, 255, 0) 95.01deg, rgba(244, 208, 221, 0.5) 185.59deg, #cddffb 274.88deg, #d8cff6 360deg);
-
 }
 @media (max-width:450px) {
   .byGragient{

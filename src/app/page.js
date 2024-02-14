@@ -1,11 +1,23 @@
+'use client'
 import Image from "next/image";
 import Community from "./components/Community";
 import FindRoles from "./components/FindRoles";
 import Footer from "./components/Footer";
+import { useRef } from "react";
 
 
 export default function Home() {
+  const communityRef = useRef(null);
   
+  const scrollToCommunity = () =>{
+    if (communityRef.current) {
+      const communityTop = communityRef.current.offsetTop;
+      window.scrollTo({
+        top: communityTop - 150,
+        behavior: 'smooth'
+      });
+    }
+  }
   return (
     <>
       <div className="bg-[#FDF5FF] min-h-screen h-auto">
@@ -58,7 +70,7 @@ export default function Home() {
                 +12,568 signed up for early access
               </p>
             </div>
-            <button
+            <button onClick={scrollToCommunity}
               className="flex items-center shadow-[0px_3px_40px_0px_#00000040] gap-2.5 pl-6 pr-[24px] py-[10px] rounded-2xl bg-[#fff] mt-[30px] font-bold"
             >
               <span>learn more herev</span>
@@ -77,7 +89,7 @@ export default function Home() {
             </video>
           </div>
         </div>
-        <Community />
+        <Community ref={communityRef}/>
         <FindRoles />
         <Footer />
       </div>
