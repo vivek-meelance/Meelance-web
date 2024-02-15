@@ -1,8 +1,7 @@
 'use client'
 import Image from "next/image";
-import Community from "./components/Community";
-import FindRoles from "./components/FindRoles";
-import Footer from "./components/Footer";
+import Community from "./components/landing_page/Community";
+import FindRoles from "./components/landing_page/FindRoles";
 import { useRef } from "react";
 
 
@@ -73,7 +72,7 @@ export default function Home() {
             <button onClick={scrollToCommunity}
               className="flex items-center shadow-[0px_3px_40px_0px_#00000040] gap-2.5 pl-6 pr-[24px] py-[10px] rounded-2xl bg-[#fff] mt-[30px] font-bold"
             >
-              <span>learn more herev</span>
+              <span>learn more here</span>
               <Image
                 src="/guidance_up-arrow.svg"
                 alt="Gallery_Animation"
@@ -91,7 +90,6 @@ export default function Home() {
         </div>
         <Community ref={communityRef}/>
         <FindRoles />
-        <Footer />
       </div>
     </>
   );

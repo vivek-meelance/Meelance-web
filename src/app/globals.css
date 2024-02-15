@@ -28,6 +28,50 @@
 .boxGred{
   background: conic-gradient(from 195.7deg at 50% 50%, #d3caf1 0deg, rgba(66, 232, 255, 0) 95.01deg, rgba(244, 208, 221, 0.5) 185.59deg, #cddffb 274.88deg, #d8cff6 360deg);
 }
+.request {
+  position: relative;
+}
+.request::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 10px;
+  height: 10px;
+  /* background-color: #000000; */
+  background: linear-gradient(108.08deg, #FF9C00 -2.53%, #FFDB03 123.11%);
+  border-radius: 50px;
+  z-index: 99;
+
+}
+.verify{
+  background: linear-gradient(268.91deg, #7D53F3 7.14%, #FB72DC 96.24%);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffff;
+  border-radius: 8px;
+}
+.phoneCountry input{
+  width: 100% !important;
+  border: 1px solid #00000033 !important;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 17px !important;
+  letter-spacing: 0em !important;
+  color: #000000B2 !important;
+  padding: 22px 62px !important;
+}
+.phoneCountry .flag-dropdown {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) !important;
+  border: 1px solid #00000033 !important;
+  border-right: none !important;
+}
 @media (max-width:450px) {
   .byGragient{
     font-size: 30px;
