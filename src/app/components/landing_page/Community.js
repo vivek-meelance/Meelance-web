@@ -3,7 +3,7 @@ import Image from "next/image";
 
 
 
-const Community = forwardRef((props,ref) => {
+const Community = forwardRef((_,ref) => {
   return (
     <div className="container mt-[30px] 2sm:mt-[80px]" ref={ref}>
       <div className="flex flex-col-reverse md:flex-row">
