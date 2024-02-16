@@ -66,11 +66,20 @@
   color: #000000B2 !important;
   padding: 22px 62px !important;
 }
-.phoneCountry .flag-dropdown {
+.phoneCountry .react-tel-input .flag-dropdown{
+  background-color: #fff !important;
+  background: linear-gradient(0deg, rgba(148, 147, 147, 0.2), rgba(185, 183, 183, 0.2)),
+  linear-gradient(0deg, rgba(226, 223, 223, 0.1), rgba(229, 225, 225, 0.1)) !important;border: 1px solid #00000033 !important;
+}
+/* .phoneCountry .flag-dropdown {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
   linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) !important;
   border: 1px solid #00000033 !important;
   border-right: none !important;
+} */
+.otpBox input{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 }
 @media (max-width:450px) {
   .byGragient{
