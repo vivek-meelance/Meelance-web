@@ -61,7 +61,7 @@ const FindRoles = () => {
           Cast your talent from millions of professionals
         </h2>
         <p className="text-lg font-medium leading-[27px] tracking-normal mt-[10px]">
-        Browse through a curated pool of artists, performers, and creators who are ready to bring your projects to life. Find the perfect match for your creative Project with Meelance's comprehensive profiles and portfolios.
+        Browse through a curated pool of artists, performers, and creators who are ready to bring your projects to life. Find the perfect match for your creative Project with Meelance&apos;s comprehensive profiles and portfolios.
         </p>
       </div>
       <div className="flex flex-col lg:flex-row gap-[10px] py-[24px] px-[16px] rounded-3xl bg-[#F7EEFC] mt-[20px]">

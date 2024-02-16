@@ -24,7 +24,7 @@ const GetOtp = ({ setOtpPage, otpPage }) => {
   return (
     <div className="basis-[50%] rounded-[0_20px_20px_0] px-[20px] py-[30px] border-[1px] border-[#00000033]">
       <p className="text-sm font-[400] leading-4 tracking-normal mt-[20px] text-center">
-        Enter the code we've sent to your mobile number
+        Enter the code we&apos;ve sent to your mobile number
       </p>
       <div className="flex justify-center otpBox">
         {code.map((digit, index) => (
