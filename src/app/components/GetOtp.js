@@ -1,9 +1,15 @@
 "use client";
-import React, { useState, useRef } from "react";
+import axios from 'axios';
+import { useState, useRef } from "react";
+import { redirect } from 'next/navigation';
 
-const GetOtp = ({ setOtpPage, otpPage }) => {
+
+
+const GetOtp = ({countryCodePro,mobileNo}) => {
   const [code, setCode] = useState(["", "", "", "", "", ""]);
   const refs = useRef([]);
+  const [verificationCode, setVerificationCode] = useState("");
+
   const handleChange = (index, e) => {
     const newCode = [...code];
     newCode[index] = e.target.value;
@@ -11,6 +17,9 @@ const GetOtp = ({ setOtpPage, otpPage }) => {
     if (e.target.value !== "" && index < 5) {
       refs.current[index + 1].focus();
     }
+
+    const combinedCode = newCode.join("");
+    setVerificationCode(combinedCode); // Update verification code state
   };
 
   const handleBackspace = (index, e) => {
@@ -21,6 +30,28 @@ const GetOtp = ({ setOtpPage, otpPage }) => {
       refs.current[index - 1].focus();
     }
   };
+  const handleVerifyOTP = async () => {
+    try {
+      const response = await axios.post(
+        "https://staging-api-gateway.meelance.com/api/v1/auth/verify-phone",
+        {
+          countryCode: countryCodePro,
+          otp: verificationCode,
+          phone: mobileNo,
+        }
+      )
+      console.log(response.data.data.isNew);
+      if (response.data.data.isNew) {
+        window.location.href = '/register';
+      } else {
+        window.location.href = '/profile';
+      }
+    } catch (error) {
+      console.error("Error verifying OTP:", error);
+    }
+  };
+
+
   return (
     <div className="basis-[50%] rounded-[0_20px_20px_0] px-[20px] py-[30px] border-[1px] border-[#00000033]">
       <p className="text-sm font-[400] leading-4 tracking-normal mt-[20px] text-center">
@@ -47,13 +78,15 @@ const GetOtp = ({ setOtpPage, otpPage }) => {
         </span>
       </p>
       <button
+        onClick={handleVerifyOTP}
         type="submit"
         className="verify w-full py-[15px] mt-[30px]"
-        onClick={() => setOtpPage(!otpPage)}
       >
         Verify
       </button>
-      <h2 className="text-sm font-semibold leading-4 tracking-normal text-center mt-[60px]">CHANGE NUMBER</h2>
+      <h2 className="text-sm font-semibold leading-4 tracking-normal text-center mt-[60px]">
+        CHANGE NUMBER
+      </h2>
     </div>
   );
 };
