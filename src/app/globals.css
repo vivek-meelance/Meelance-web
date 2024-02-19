@@ -150,14 +150,16 @@ linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
   background-color: rgba(0, 0, 0, 1) !important;
   color:#fff !important;
   border-radius: 10px !important;
+  /* z-index: 20; */
 }
 .access .selected-flag{
   background-color: rgba(0, 0, 0, 1) !important;
   color:#fff !important;
 }
 .access .flag-dropdown{
-  border-radius: 10px 0px 0px 10px;
-  overflow: hidden;
+  /* border-radius: 10px 0px 0px 10px !important; */
+  /* overflow: hidden !important; */
+  /* z-index: 10; */
 } 
 @media (max-width:640px) {
   .access input{
