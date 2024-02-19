@@ -1,11 +1,11 @@
 "use client"
-import { useState,useEffect} from "react";
+import { useState} from "react";
 import axios from "axios";
 import Link from "next/link";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import GetOtp from "../components/GetOtp";
-import { useRouter } from "next/router";
+
 
 const Page = () => {
   const [otpPage, setOtpPage] = useState(false);
@@ -52,7 +52,7 @@ const Page = () => {
 
             <div className="phoneCountry">
               <PhoneInput
-                country={"us"}
+                country={"in"}
                 value={phoneNumber}
                 onChange={(phone) => setPhoneNumber(phone)}
                 className="mt-[30px]"

@@ -5,6 +5,7 @@ import FindRoles from "./components/landing_page/FindRoles";
 import { useRef } from "react";
 
 
+
 export default function Home() {
   const communityRef = useRef(null);
   
@@ -22,9 +23,9 @@ export default function Home() {
       <div className="bg-[#FDF5FF] min-h-screen h-auto">
         <div className="container grid grid-cols-1 sm:grid-cols-[1.5fr_1fr] gap-4">
           <div className="pt-[20px] md:pt-[50px]">
-            <h1 className="text-[35px] 2sm:text-[40px] lg:text-[59px] font-medium heading">
+            <h1 className={`text-[35px] 2sm:text-[40px] lg:text-[59px] font-medium heading`}>
               <span>
-                Exclusive resource for ”entertainment talent professionals”
+              Exclusive resource for “entertainment talent professionals”
               </span>
             </h1>
             {/* <Image

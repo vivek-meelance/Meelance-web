@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .heading{
   background-image: 
   linear-gradient(180deg, rgba(0, 0, 0, 0.66) 0%, #000000 84%),
@@ -9,6 +10,18 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  opacity: 0;
+  animation: scaleUp 1s ease-in-out forwards;
+}
+@keyframes scaleUp {
+  from {
+      opacity: 0;
+      transform: scale(0);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
 }
 .byGragient{
   background: linear-gradient(
@@ -41,7 +54,6 @@
   /* background-color: #000000; */
   background: linear-gradient(108.08deg, #FF9C00 -2.53%, #FFDB03 123.11%);
   border-radius: 50px;
-  z-index: 99;
 
 }
 .verify{
@@ -71,15 +83,63 @@
   background: linear-gradient(0deg, rgba(148, 147, 147, 0.2), rgba(185, 183, 183, 0.2)),
   linear-gradient(0deg, rgba(226, 223, 223, 0.1), rgba(229, 225, 225, 0.1)) !important;border: 1px solid #00000033 !important;
 }
-/* .phoneCountry .flag-dropdown {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-  linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) !important;
-  border: 1px solid #00000033 !important;
-  border-right: none !important;
-} */
 .otpBox input{
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
   linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}
+.registerForm{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}
+.regiPhone input{
+  width: 100% !important;
+  height: 44px !important;
+  border-radius: 10px !important;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) !important;
+}
+.regiPhone .react-tel-input .flag-dropdown{
+  background-color: #fff !important;
+  background: linear-gradient(0deg, rgba(148, 147, 147, 0.2), rgba(185, 183, 183, 0.2)),
+  linear-gradient(0deg, rgba(226, 223, 223, 0.1), rgba(229, 225, 225, 0.1)) !important;border: 1px solid #00000033 !important;
+  border-radius:10px 0px 0px 10px !important;
+}
+.registerDate .input-field{
+  height: calc(1.5em + 1rem + 2px);
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  display: block;
+  width: 40%;
+  font-weight: 400;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 2px solid black;
+
+}
+
+.registerDate input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background-repeat:  no-repeat;
+  width: 25px;
+  height: 25px;
+  border-width: thin
+}
+.registerDate input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  /* left: 1%; */
+}
+.registerDate input::-webkit-datetime-edit-fields-wrapper {
+  position: relative;
+  /* left: 1%; */
+}
+.registerDate input::-webkit-datetime-edit {
+  position: relative;
+  left: 10%;
 }
 @media (max-width:450px) {
   .byGragient{

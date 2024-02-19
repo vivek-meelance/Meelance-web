@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import PopupBox from "./PopupBox";
 import EasyAccessForm from "../components/landing_page/EasyAccessForm";
+import SideBar from "./SideBar";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,15 +59,11 @@ const Header = () => {
               </button>
             </PopupBox>
 
-            <div className="relative">
+            <div>
               <button className="bg-white rounded-full p-2" onClick={handleHam}>
                 <Image src="/Menu.svg" alt="Menu Logo" width={24} height={24} />
               </button>
-              {hamburger ? (
-                <Link href="/login" className="block text-center text-black-200 hover:text-black-700 font-semibold" onClick={()=>setHamburger(!hamburger)}><div className="bg-white rounded-lg shadow-md p-4 absolute -right-[50px]">
-                  Login
-                </div></Link>
-              ) : (
+              {hamburger ? <SideBar hamburger={hamburger} setHamburger={setHamburger}/> : (
                 ""
               )}
             </div>
