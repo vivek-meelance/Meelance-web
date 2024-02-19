@@ -1,11 +1,10 @@
 "use client";
 import axios from 'axios';
 import { useState, useRef } from "react";
-import { redirect } from 'next/navigation';
 
 
 
-const GetOtp = ({countryCodePro,mobileNo}) => {
+const GetOtp = ({countryCodePro,mobileNo,otpPage,setOtpPage}) => {
   const [code, setCode] = useState(["", "", "", "", "", ""]);
   const refs = useRef([]);
   const [verificationCode, setVerificationCode] = useState("");
@@ -84,7 +83,7 @@ const GetOtp = ({countryCodePro,mobileNo}) => {
       >
         Verify
       </button>
-      <h2 className="text-sm font-semibold leading-4 tracking-normal text-center mt-[60px]">
+      <h2 className="text-sm font-semibold leading-4 tracking-normal text-center mt-[60px] cursor-pointer" onClick={()=>setOtpPage(!otpPage)}>
         CHANGE NUMBER
       </h2>
     </div>

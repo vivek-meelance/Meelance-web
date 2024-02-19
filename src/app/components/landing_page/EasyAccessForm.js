@@ -1,24 +1,12 @@
-import React from "react";
+"use client"
+import React,{useState} from "react";
 import Image from "next/image";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import Select from "react-select";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import * as Yup from "yup";
 
-const countryOptions = [
-  { value: "+1", label: "+1" },
-  { value: "+44", label: "+44" },
-  //   { value: "+44", label: "+44 (United Kingdom)" }
-  // Add more country codes as needed
-];
-const customStyles = {
-  control: (provided, state) => ({
-    ...provided,
-    backgroundColor: "transparent", // Set background color to transparent
-    border: state.isFocused ? "0px solid blue" : "0px solid gray", // Example border styling
-    // You can add more custom styles as needed
-  }),
-  // Add more custom styles for other elements if needed
-};
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Name is required"),
   mobile: Yup.object().shape({
@@ -32,6 +20,7 @@ const validationSchema = Yup.object().shape({
 });
 
 const EasyAccessForm = () => {
+  const [phone,setPhone] = useState("");
   const handleSubmit = (values, { setSubmitting }) => {
     // Handle form submission
     console.log(values);
@@ -59,7 +48,7 @@ const EasyAccessForm = () => {
       >
         {({ isSubmitting }) => (
           <Form className="mt-[30px]">
-            <div className="flex flex-wrap">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-[20px]">
               <div className=" flex-1">
                 <label
                   htmlFor="name"
@@ -72,9 +61,9 @@ const EasyAccessForm = () => {
                     type="text"
                     id="name"
                     name="name"
-                    className="bg-[rgba(25,25,25,1)] py-[10px] px-[16px] pl-[30px] text-[#ffff] text-sm font-normal leading-[17px] tracking-normal rounded-xl w-[239px]"
+                    className="bg-[rgba(0,0,0,.5)] py-[10px] px-[10px] pl-[30px] text-[#ffff] text-sm font-normal leading-[17px] tracking-normal rounded-xl border-[1px] border-[#fff] h-[33px] w-full sm:w-[300px]"
                     />
-                    <Image src="/user_Icon.svg" alt="Menu Logo" width={24} height={24} className="absolute top-[9px] left-[5px]" />
+                    <Image src="/user_Icon.svg" alt="Menu Logo" width={24} height={24} className="absolute top-[5px] left-[5px]" />
                 </div>
                 <ErrorMessage name="name" component="div" />
               </div>
@@ -85,25 +74,15 @@ const EasyAccessForm = () => {
                 >
                   Phone number
                 </label>
-                <div className="flex bg-[rgba(25,25,25,1)]  py-[10px] px-[16px] rounded-xl h-[50px] w-[320px]">
-                  <Field name="mobile" className="bg-transparent">
-                    {({ field }) => (
-                      <Select
-                        {...field}
-                        options={countryOptions}
-                        placeholder="Select Country Code"
-                        styles={customStyles}
-                      />
-                    )}
-                  </Field>
-                  <Field
-                    type="text"
-                    id="mobileNumber"
-                    name="mobile.number"
-                    placeholder="Enter Number"
-                    className="bg-transparent w-auto"
-                  />
-                </div>
+                <div className="py-[10px] rounded-xl access">
+                  <PhoneInput
+                      country={"in"}
+                      value={phone}
+                      name="mobile"
+                      onChange={(phone) => setPhone("phone", phone)}
+                      className="w-full sm:w-[300px]"
+                    />
+                  </div>
                 <ErrorMessage name="mobile" component="div" />
               </div>
               <div className=" flex-1">
@@ -118,9 +97,9 @@ const EasyAccessForm = () => {
                     type="email"
                     id="email"
                     name="email"
-                    className="bg-[rgba(25,25,25,1)] py-[10px] px-[16px] pl-[30px] text-[#ffff] text-sm font-normal leading-[17px] tracking-normal rounded-xl w-[239px]"
+                    className="bg-[rgba(0,0,0,.5)] py-[10px] px-[10px] pl-[30px] text-[#ffff] text-sm font-normal leading-[17px] tracking-normal rounded-xl border-[1px] border-[#fff] h-[33px] w-full sm:w-[300px]"
                     />
-                    <Image src="/easy_mail.svg" alt="Menu Logo" width={20} height={20} className="absolute top-[9px] left-[7px]" />
+                    <Image src="/easy_mail.svg" alt="Menu Logo" width={20} height={20} className="absolute top-[5px] left-[7px]" />
                 </div>
                 <ErrorMessage name="email" component="div" />
               </div>
@@ -136,9 +115,9 @@ const EasyAccessForm = () => {
                     type="text"
                     id="portfolioLink"
                     name="portfolioLink"
-                    className="bg-[rgba(25,25,25,1)] py-[10px] px-[16px] pl-[32px] text-[#ffff] text-sm font-normal leading-[17px] tracking-normal rounded-xl w-[239px]"
+                    className="bg-[rgba(0,0,0,.5)] py-[10px] px-[10px] pl-[30px] text-[#ffff] text-sm font-normal leading-[17px] tracking-normal rounded-xl border-[1px] border-[#fff] h-[33px] w-full sm:w-[300px]"
                     />
-                    <Image src="/iconamoon_link-thin.svg" alt="Menu Logo" width={24} height={24} className="absolute top-[9px] left-[5px]" />
+                    <Image src="/iconamoon_link-thin.svg" alt="Menu Logo" width={24} height={24} className="absolute top-[5px] left-[5px]" />
                 </div>
                 <ErrorMessage name="portfolioLink" component="div" />
               </div>

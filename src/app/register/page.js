@@ -1,39 +1,68 @@
 "use client";
-import React from "react";
+import React, { useState,useEffect } from "react";
 import Image from "next/image";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import * as Yup from "yup";
+import axios from "axios";
+
+const initialValues = {
+  firstName: "",
+  lastName: "",
+  phone: "",
+  dob: "",
+  gender: "",
+};
 
 const Page = () => {
+  const [error, setError] = useState("");
+  const [phone, setPhone] = useState(""); // State to manage phone input
+  // useEffect(() => {
+  //   const accessToken = localStorage.getItem("accessToken");
+  //   if (accessToken) {
+  //     window.location.href = "/profile";
+  //   }else{
+  //     window.location.href = "/login";
+  //   }
+  // }, []);
+
+  const handleSubmit = async (values, { setSubmitting }) => {
+    try {
+      const selectedFlag = document.querySelector(".react-tel-input .flag-dropdown .selected-flag");
+      const countryCode = selectedFlag ? selectedFlag.getAttribute("title").split(":")[1]: "";
+      const formattedPhoneNumber = phone.slice(2).replace(/\D/g, "");
+
+      const response = await axios.post(
+        "https://staging-api-gateway.meelance.com/api/v1/auth/register",
+        {
+          firstName: values.firstName,
+          lastName: values.lastName,
+          countryCode: countryCode,
+          phone: formattedPhoneNumber,
+          email: values.email,
+          gender: values.gender,
+          dob: values.dob,
+          isPolicyAccepted: "true",
+        }
+      );
+      const accessToken = response.data.tokens.access.token;
+      localStorage.setItem("accessToken", accessToken);
+      window.location.href = "/profile";
+    } catch (error) {
+      console.error("Error registering phone:", error);
+      setError("Error registering phone. Please try again.");
+    }
+    setSubmitting(false);
+  };
+
   return (
     <div className="container py-[35px]">
       <div className="flex justify-center m-auto h-auto md:h-[559px] w-auto max-w-[750px] 2xl:max-w-[1000px]">
         <div className="basis-[50%] hidden md:block bg-[url('/loginPic.svg')] bg-no-repeat bg-cover"></div>
         <div className="basis-[100%] sm:basis-[70%] md:basis-[50%] rounded-[20px] md:rounded-[0_20px_20px_0] px-[20px] py-[30px] border-[1px] border-[#00000033]">
           <div>
-            <Formik
-              initialValues={{
-                firstName: "",
-                lastName: "",
-                phoneNumber: "",
-                dob: "",
-                gender: "",
-              }}
-              validationSchema={Yup.object({
-                firstName: Yup.string().required("Required"),
-                lastName: Yup.string().required("Required"),
-                phoneNumber: Yup.string().required("Required"),
-                dob: Yup.date().required("Required"),
-                gender: Yup.string().required("Required"),
-              })}
-              onSubmit={(values) => {
-                // Handle form submission here
-                console.log(values);
-              }}
-            >
-              {({ isSubmitting }) => (
+            <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+              {({ values, handleChange }) => (
                 <Form>
                   <h2 className="text-sm font-bold leading-[17px] tracking-normal">
                     Complete your Signup
@@ -68,19 +97,13 @@ const Page = () => {
                     </div>
                   </div>
                   <div className="regiPhone mt-[20px]">
-                    <Field name="phoneNumber">
-                      {({ field }) => (
-                        <PhoneInput
-                          country={"in"}
-                          value=""
-                          inputProps={{
-                            name: "phoneNumber",
-                            required: true,
-                          }}
-                        />
-                      )}
-                    </Field>
-                    <ErrorMessage name="phoneNumber" />
+                    <PhoneInput
+                      country={"in"}
+                      value={phone}
+                      name="phone"
+                      onChange={setPhone} // Update phone state directly
+                    />
+                    <ErrorMessage name="phone" />
                   </div>
                   <div className="registerDate">
                     <Field
@@ -112,7 +135,6 @@ const Page = () => {
                   </div>
                   <button
                     type="submit"
-                    disabled={isSubmitting}
                     className="verify w-full py-[15px] mt-[20px]"
                   >
                     SUBMIT

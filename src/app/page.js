@@ -23,7 +23,7 @@ export default function Home() {
       <div className="bg-[#FDF5FF] min-h-screen h-auto">
         <div className="container grid grid-cols-1 sm:grid-cols-[1.5fr_1fr] gap-4">
           <div className="pt-[20px] md:pt-[50px]">
-            <h1 className={`text-[35px] 2sm:text-[40px] lg:text-[59px] font-medium heading`}>
+            <h1 className={`text-[35px] 2sm:text-[40px] lg:text-[50px] font-semibold heading`} style={{ fontFamily: 'Chau Philomene One, sans-serif' }}>
               <span>
               Exclusive resource for “entertainment talent professionals”
               </span>

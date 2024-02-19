@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Chau Philomene One';
+  src: url('/fonts/ChauPhilomeneOne-Regular.ttf') format('truetype');
+  /* Add other font weights/styles as needed */
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -140,6 +145,24 @@ linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 .registerDate input::-webkit-datetime-edit {
   position: relative;
   left: 10%;
+}
+.access input{
+  background-color: rgba(0, 0, 0, 1) !important;
+  color:#fff !important;
+  border-radius: 10px !important;
+}
+.access .selected-flag{
+  background-color: rgba(0, 0, 0, 1) !important;
+  color:#fff !important;
+}
+.access .flag-dropdown{
+  border-radius: 10px 0px 0px 10px;
+  overflow: hidden;
+} 
+@media (max-width:640px) {
+  .access input{
+    width: 100% !important;
+  }
 }
 @media (max-width:450px) {
   .byGragient{

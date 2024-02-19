@@ -74,7 +74,7 @@ const Page = () => {
             </p>
           </div>
         ) : (
-          <GetOtp countryCodePro={countryCodePro} mobileNo={mobileNo}/>
+          <GetOtp countryCodePro={countryCodePro} mobileNo={mobileNo} setOtpPage={setOtpPage} otpPage={otpPage}/>
         )}
       </div>
     </div>
