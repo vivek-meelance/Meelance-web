@@ -40,7 +40,7 @@ const GetOtp = ({countryCodePro,mobileNo,otpPage,setOtpPage}) => {
         }
       )
       console.log(response.data.data.isNew);
-      if (response.data.data.isNew) {
+      if (response.data.data.isNew = false) {
         window.location.href = '/register';
       } else {
         window.location.href = '/profile';

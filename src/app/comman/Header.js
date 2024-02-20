@@ -53,7 +53,7 @@ const Header = () => {
               <EasyAccessForm />
               <button
                 onClick={closePopup}
-                className="text-[#fff] absolute right-[20px] top-4 bg-[#fff] rounded-2xl"
+                className="text-[#fff] absolute right-[20px] top-4 bg-[#fff] rounded-full w-[44px] h-[44px] shadow-[0px_1px_6.199999809265137px_1px_#BF75E533_inset] flex justify-center items-center"
               >
                 <Image src="/cancel.svg" alt="Menu Logo" width={24} height={24} />
               </button>
