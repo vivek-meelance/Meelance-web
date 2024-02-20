@@ -19,7 +19,7 @@ const validationSchema = Yup.object().shape({
     .required("Portfolio link is required"),
 });
 
-const EasyAccessForm = () => {
+const EasyAccessForm = ({closePopup}) => {
   const [phone,setPhone] = useState("");
   const handleSubmit = (values, { setSubmitting }) => {
     // Handle form submission
@@ -131,6 +131,14 @@ const EasyAccessForm = () => {
                 className="text-[#fff] bg-[#bf75e5] w-[329px] rounded-xl py-2 mx-auto"
                 >
                 Submit
+                </button>
+            </div>
+            <div className="w-full flex justify-center mt-[30px]">
+                <button
+                onClick={closePopup}
+                className="text-sm font-semibold leading-4 tracking-normal text-center bg-transparent border-none text-[#ffff]"
+                >
+                CANCEL
                 </button>
             </div>
           </Form>

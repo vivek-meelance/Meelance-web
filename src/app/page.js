@@ -1,8 +1,9 @@
 'use client'
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Community from "./components/landing_page/Community";
 import FindRoles from "./components/landing_page/FindRoles";
-import { useRef } from "react";
+
 
 
 
@@ -18,6 +19,34 @@ export default function Home() {
       });
     }
   }
+  useEffect(() => {
+    const videos = document.querySelectorAll("video");
+
+    videos.forEach((video) => {
+      const playPromise = video.play();
+
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            // Autoplay started
+          })
+          .catch((error) => {
+            console.log("Autoplay was prevented:", error);
+          });
+      }
+
+      const handleEnded = () => {
+        video.currentTime = 0;
+        video.play();
+      };
+
+      video.addEventListener("ended", handleEnded);
+
+      return () => {
+        video.removeEventListener("ended", handleEnded);
+      };
+    });
+  }, []);
   return (
     <>
       <div className="bg-[#FDF5FF] min-h-screen h-auto">
@@ -28,15 +57,8 @@ export default function Home() {
               Exclusive resource for “entertainment talent professionals”
               </span>
             </h1>
-            {/* <Image
-              src="/Gallery_Animation.svg"
-              alt="Gallery_Animation"
-              width="832"
-              height="258"
-              className="mt-[20px] md:mt-[50px]"
-            /> */}
             <div className="rounded-2xl truncate">
-              <video autoPlay muted loop className="w-full">
+              <video muted className="w-full" ref={communityRef}>
                 <source src="/videos/frontVideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -51,6 +73,7 @@ export default function Home() {
               // width="372"
               // height="508"
               className="mx-auto md:ml-auto 2xl:mx-auto w-[400px]"
+              ref={communityRef}
             >
               <source src="/videos/mobileVideo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -83,7 +106,7 @@ export default function Home() {
             </button>
           </div>
           <div className="flex-1 truncate rounded-2xl">
-            <video autoPlay muted loop>
+            <video autoPlay muted loop ref={communityRef}>
               <source src="/videos/commentsVideo.mp4" type="video/mp4" className="w-full"/>
               Your browser does not support the video tag.
             </video>
