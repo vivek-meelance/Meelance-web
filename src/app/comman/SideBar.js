@@ -26,7 +26,7 @@ const SideBar = ({ hamburger, setHamburger }) => {
             onClick={() => setHamburger(!hamburger)}
             className="text-[#fff] bg-[#fff] rounded-full absolute w-[44px] h-[44px] left-[15px] top-[17px] shadow-[0px_1px_6.199999809265137px_1px_#BF75E533_inset] flex justify-center items-center"
           >
-            <Image src="/cancel.svg" alt="Menu Logo" width={24} height={24} />
+            <Image src="/images/cancel.svg" alt="Menu Logo" width={24} height={24} />
           </button>
         </div>
       </div>

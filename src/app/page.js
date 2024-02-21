@@ -84,7 +84,7 @@ export default function Home() {
           <div className="flex-1">
             <div className="flex flex-col lg:flex-row items-center p-[8px] w-auto lg:w-[540px] gap-[10px] shadow-[0px_3px_25px_0px_#00000033] rounded-xl">
               <Image
-                src="/Avatars.svg"
+                src="/images/Avatars.svg"
                 alt="Gallery_Animation"
                 width="208"
                 height="48"
@@ -98,7 +98,7 @@ export default function Home() {
             >
               <span>learn more here</span>
               <Image
-                src="/guidance_up-arrow.svg"
+                src="/images/guidance_up-arrow.svg"
                 alt="Gallery_Animation"
                 width="24"
                 height="24"

@@ -63,7 +63,7 @@ const EasyAccessForm = ({closePopup}) => {
                     name="name"
                     className="bg-[rgba(0,0,0,.5)] py-[10px] px-[10px] pl-[30px] text-[#ffff] text-sm font-normal leading-[17px] tracking-normal rounded-xl border-[1px] border-[#fff] h-[33px] w-full sm:w-[300px]"
                     />
-                    <Image src="/user_Icon.svg" alt="Menu Logo" width={24} height={24} className="absolute top-[5px] left-[5px]" />
+                    <Image src="/images/user_Icon.svg" alt="Menu Logo" width={24} height={24} className="absolute top-[5px] left-[5px]" />
                 </div>
                 <ErrorMessage name="name" component="div" />
               </div>
@@ -99,7 +99,7 @@ const EasyAccessForm = ({closePopup}) => {
                     name="email"
                     className="bg-[rgba(0,0,0,.5)] py-[10px] px-[10px] pl-[30px] text-[#ffff] text-sm font-normal leading-[17px] tracking-normal rounded-xl border-[1px] border-[#fff] h-[33px] w-full sm:w-[300px]"
                     />
-                    <Image src="/easy_mail.svg" alt="Menu Logo" width={20} height={20} className="absolute top-[5px] left-[7px]" />
+                    <Image src="/images/easy_mail.svg" alt="Menu Logo" width={20} height={20} className="absolute top-[5px] left-[7px]" />
                 </div>
                 <ErrorMessage name="email" component="div" />
               </div>
@@ -117,7 +117,7 @@ const EasyAccessForm = ({closePopup}) => {
                     name="portfolioLink"
                     className="bg-[rgba(0,0,0,.5)] py-[10px] px-[10px] pl-[30px] text-[#ffff] text-sm font-normal leading-[17px] tracking-normal rounded-xl border-[1px] border-[#fff] h-[33px] w-full sm:w-[300px]"
                     />
-                    <Image src="/iconamoon_link-thin.svg" alt="Menu Logo" width={24} height={24} className="absolute top-[5px] left-[5px]" />
+                    <Image src="/images/iconamoon_link-thin.svg" alt="Menu Logo" width={24} height={24} className="absolute top-[5px] left-[5px]" />
                 </div>
                 <ErrorMessage name="portfolioLink" component="div" />
               </div>

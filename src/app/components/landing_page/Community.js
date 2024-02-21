@@ -62,7 +62,7 @@ const Community = forwardRef((_, ref) => {
       <button className="flex items-center shadow-[0px_3px_40px_0px_#00000040] gap-[10px] pl-6 pr-[24px] py-[10px] rounded-2xl bg-[#fff] mt-[20px] font-bold">
         <span>Create your digital portfolio</span>
         <Image
-          src="/guidance_up-arrow.svg"
+          src="/images/guidance_up-arrow.svg"
           alt="Gallery_Animation"
           width="24"
           height="24"

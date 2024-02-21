@@ -8,49 +8,49 @@ const Footer = () => {
       <div className="container h-auto lg:h-[150px] py-[20px] lg:py-0 flex flex-col lg:flex-row gap-[20px] justify-between items-center">
         <div className="flex justify-center 2sm:justify-start flex-wrap gap-1">
           <Image
-            src="/youtube.svg"
+            src="/images/youtube.svg"
             alt="Gallery_Animation"
             width="44"
             height="44"
           />
           <Image
-            src="/facebook.svg"
+            src="/images/facebook.svg"
             alt="Gallery_Animation"
             width="44"
             height="44"
           />
           <Image
-            src="/Insta.svg"
+            src="/images/Insta.svg"
             alt="Gallery_Animation"
             width="44"
             height="44"
           />
           <Image
-            src="/ximg.svg"
+            src="/images/ximg.svg"
             alt="Gallery_Animation"
             width="44"
             height="44"
           />
           <Image
-            src="/thread.svg"
+            src="/images/thread.svg"
             alt="Gallery_Animation"
             width="44"
             height="44"
           />
           <Image
-            src="/tiktok.svg"
+            src="/images/tiktok.svg"
             alt="Gallery_Animation"
             width="44"
             height="44"
           />
           <Image
-            src="/telegram.svg"
+            src="/images/telegram.svg"
             alt="Gallery_Animation"
             width="44"
             height="44"
           />
           <Image
-            src="/medium.svg"
+            src="/images/medium.svg"
             alt="Gallery_Animation"
             width="44"
             height="44"

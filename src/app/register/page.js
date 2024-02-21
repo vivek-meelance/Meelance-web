@@ -16,15 +16,7 @@ const initialValues = {
 
 const Page = () => {
   const [error, setError] = useState("");
-  const [phone, setPhone] = useState(""); // State to manage phone input
-  // useEffect(() => {
-  //   const accessToken = localStorage.getItem("accessToken");
-  //   if (accessToken) {
-  //     window.location.href = "/profile";
-  //   }else{
-  //     window.location.href = "/login";
-  //   }
-  // }, []);
+  const [phone, setPhone] = useState("");
 
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
@@ -58,11 +50,10 @@ const Page = () => {
   return (
     <div className="container py-[35px]">
       <div className="flex justify-center m-auto h-auto md:h-[559px] w-auto max-w-[750px] 2xl:max-w-[1000px]">
-        <div className="basis-[50%] hidden md:block bg-[url('/loginPic.svg')] bg-no-repeat bg-cover"></div>
+        <div className="basis-[50%] hidden md:block bg-[url('/images/loginPic.svg')] bg-no-repeat bg-cover"></div>
         <div className="basis-[100%] sm:basis-[70%] md:basis-[50%] rounded-[20px] md:rounded-[0_20px_20px_0] px-[20px] py-[30px] border-[1px] border-[#00000033]">
           <div>
             <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-              {({ values, handleChange }) => (
                 <Form>
                   <h2 className="text-sm font-bold leading-[17px] tracking-normal">
                     Complete your Signup
@@ -71,7 +62,7 @@ const Page = () => {
                     <div>
                       <div className="flex">
                         <Image
-                          src="/userIcon.svg"
+                          src="/images/userIcon.svg"
                           alt="Menu Logo"
                           className="inline"
                           width={24}
@@ -115,7 +106,7 @@ const Page = () => {
                   </div>
                   <div className="relative">
                     <Image
-                      src="/gender.svg"
+                      src="/images/gender.svg"
                       alt="Menu Logo"
                       className="absolute top-[30px] left-[10px]"
                       width={24}
@@ -140,7 +131,6 @@ const Page = () => {
                     SUBMIT
                   </button>
                 </Form>
-              )}
             </Formik>
           </div>
         </div>

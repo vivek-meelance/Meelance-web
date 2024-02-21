@@ -37,7 +37,7 @@ const FindRoles = () => {
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-[20px] mt-[40px]">
         <div className="basis-[30%]">
           <Image
-            src="/jobUpdate.svg"
+            src="/images/jobUpdate.svg"
             alt="Gallery_Animation"
             width="335"
             height="335"
@@ -123,7 +123,7 @@ const FindRoles = () => {
         </div>
         <div className="flex-1">
           <Image
-            src="/performance.svg"
+            src="/images/performance.svg"
             alt="Gallery_Animation"
             width="567"
             height="318"

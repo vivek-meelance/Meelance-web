@@ -40,10 +40,12 @@ const GetOtp = ({countryCodePro,mobileNo,otpPage,setOtpPage}) => {
         }
       )
       console.log(response.data.data.isNew);
-      if (response.data.data.isNew = false) {
-        window.location.href = '/register';
-      } else {
+      if (response.data.data.isNew === false) {
         window.location.href = '/profile';
+        alert("old user");
+      }else if(response.data.data.isNew === true) {
+        window.location.href = '/register';
+        alert("new user");
       }
     } catch (error) {
       console.error("Error verifying OTP:", error);

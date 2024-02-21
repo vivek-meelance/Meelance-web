@@ -23,11 +23,11 @@ const Header = () => {
   return (
     <div className="bg-[#FDF5FF] sticky top-0 z-10">
       <div className="container">
-        <nav className=" p-4 flex justify-between items-center">
+        <nav className=" py-4 flex justify-between items-center">
           <div>
             <Link href="/">
               <Image
-                src="/Logo.svg"
+                src="/images/Logo.svg"
                 alt="Melance Logo"
                 width={387}
                 height={100}
@@ -42,7 +42,7 @@ const Header = () => {
               className="text-white bg-white w-auto text-lg mr-4 flex items-center justify-between rounded-2xl py-[10px] px-[8px] request"
             >
               <Image
-                src="/Mail.svg"
+                src="/images/Mail.svg"
                 alt="Mail Logo"
                 className=""
                 width={24}
@@ -55,7 +55,7 @@ const Header = () => {
 
             <div>
               <button className="bg-white rounded-full p-2" onClick={handleHam}>
-                <Image src="/Menu.svg" alt="Menu Logo" width={24} height={24} />
+                <Image src="/images/Menu.svg" alt="Menu Logo" width={24} height={24} />
               </button>
               {hamburger ? <SideBar hamburger={hamburger} setHamburger={setHamburger}/> : (
                 ""
